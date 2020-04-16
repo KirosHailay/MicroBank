@@ -11,6 +11,7 @@
   preloader
   ---------------------------- */
   $(window).on('load', function() {
+        // console.log("have you ever come to this");
     var pre_loader = $('#preloader');
     pre_loader.fadeOut('slow', function() {
       $(this).remove();
