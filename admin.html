@@ -10,7 +10,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/assets/css/adminStyle.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-
+    <!--JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/adminTransaction.js"></script>
 </head>
 </div>
 
@@ -89,17 +91,12 @@
                 <div id="sec3" class="hidden">
                 <h2 id="depositeMoney">Transactions </h2>
                 <hr>
-                <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" name="search"
-                    id="search">
-                    <input class="form-control form-control-sm mr-3 w-75 btn" type="date"
-                        placeholder="Search transaction by Date">
-                    <button type="submit" class="btn">Search by Date</button>
-                </form>
+
                 <br>
-                <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" name="search"
+                <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" id="searchByAccount"
                     id="search">
                     <input class="form-control form-control-sm mr-3 w-75 btn" type="text"
-                        placeholder="Enter Account number">
+                        placeholder="Enter Account number" id="inputNumber">
                     <button type="submit" class="btn">Search by Account Number</button>
                 </form>
                 <hr>
@@ -112,25 +109,8 @@
                             <th>Transaction Amount $</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>01</td>
-                            <td>12-04-2009</td>
-                            <td>100.00</td>
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>01</td>
-                            <td>12-04-2009</td>
-                            <td>100.00</td>
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>01</td>
-                            <td>12-04-2009</td>
-                            <td>100.00</td>
-                        </tr>
+                    <tbody id="transactionBody">
+
                     </tbody>
                 </table>
             </div>
