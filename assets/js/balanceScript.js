@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 
-    $.get("http://localhost:8080/EBanking/transaction/")
+    $.get("http://localhost:8080/EBanking/transaction/123456/")
     .done(display)
     .fail(errorFunction)
     .always(function(){
@@ -30,7 +30,7 @@ function searchFunction(){
     let dates=searchDate.split("-");
     let datePath="?year="+dates[0]+"month="+dates[1]+"day="+dates[2];
     //have to add the get acc number from session code
-    $.get("http://localhost:8080/EBanking/transaction/"+"acc3"+"/" +datePath)
+    $.get("http://localhost:8080/EBanking/transaction/"+"1234567"+"/" +datePath)
     .done(displaySearch)
     .fail(errorFunction)
     .always(function(){
