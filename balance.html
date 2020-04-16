@@ -28,6 +28,11 @@
     <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
+
+    <!--JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/js/balanceScript.js"></script>
+
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
     <script language="javascript" type="text/javascript" src="fragmnent/header.txt"></script>
@@ -62,9 +67,9 @@
         <div class="col-6">
             <p>Current Balance: <Strong id="balance-ammount"></span>$</p>
  
-            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" name="search" id="search">
+            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2" name="search-form" id="search">
                 <input class="form-control form-control-sm mr-3 w-75 btn" type="date" placeholder="Search transaction by Date"
-                  aria-label="Search">
+                  aria-label="Search" id="searchInput">
                   <ul>
                     <button type="submit" class="btn-default">Search</button>
                 </ul>
@@ -86,8 +91,8 @@
                     <th>Transaction Amount $</th>
                   </tr>
                 </thead>
-                <tbody>
-                  <tr>
+                <tbody id="tranasactionBody">
+                  <!-- <tr>
                     <td>01</td>
                     <td>12-04-2009</td>
                     <td>100.00</td>
@@ -101,7 +106,7 @@
                     <td>01</td>
                     <td>12-04-2009</td>
                     <td>100.00</td>
-                  </tr>
+                  </tr> -->
                 </tbody>
               </table>
               </div>
