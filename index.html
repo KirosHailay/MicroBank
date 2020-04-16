@@ -31,6 +31,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
 
+  
   <!--Header included as a fragment-->
   <!-- <script language="javascript" type="text/javascript" 
       src="fragmnent/header.txt"></script> -->
@@ -41,6 +42,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+ 
 </head>
 
 <body data-spy="scroll" data-target="#navbar-example">
@@ -153,15 +155,15 @@
           <!-- single-well start-->
           <div class="col-6">
             <div class="form contact-form">
-              <form action="" method="post" role="form" class="php-email-form" name="form-signin">
+              <form id ="form"action="" method="post" role="form" class="php-email-form" name="form-signin">
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                    data-rule="email" data-msg="Please enter a valid email" />
+                  <input type="text" class="form-control" name="name" id="user" placeholder="Username" required
+                    data-rule="text" data-msg="Please enter a valid username" />
                   <div class="validate"></div>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" id="password" placeholder="password"
-                    data-rule="minlen:8" data-msg="Please enter at least 8 chars of subject" />
+                  <input type="password" class="form-control" name="password" id="password" placeholder="password" required
+                  />
                   <div class="validate"></div>
                 </div>
                 <div class="text-center"><button type="submit">Sign in</button></div>
@@ -194,27 +196,27 @@
 
             <div class="col-6">
               <div class="form">
-                <form action="" method="post" name="form-signup" role="form" class="php-email-form">
+                <form id="forms" action="" method="post" name="form-signup" role="form" class="php-email-form">
                   <div class="form-group">
                     <input type="text" name="createAccountNumber" class="form-control" id="createAccountNumber"
-                      placeholder="Your Account Number" data-rule="minlen:10"
-                      data-msg="Please enter at least 10 chars" />
+                   placeholder="Your Account Number" pattern=".{5,}" required/>  
                     <div class="validate"></div>
                   </div>
                   <div class="form-group">
                     <input type="text" name="createUsername" class="form-control" id="createUsername"
-                      placeholder="Your Username" data-rule="minlen:5" data-msg="Please enter at least 5 chars" />
+                    placeholder="Your Username" required />
                     <div class="validate"></div>
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control" name="createPassword" id="createPassword"
-                      placeholder="Password" data-rule="minlen:8"
-                      data-msg="Please enter characters of atleast 8 characters contaning atlest one digit, one uppercase and one lowercase characters" />
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="New Password" required/>
                     <div class="validate"></div>
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
-                      placeholder="Confirm Password" data-rule="minlen:8" data-msg="Please confirm your password" />
+                    title="Must match the newly created password"  placeholder="Confirm Password" required/>
+                    <p style="color: red;"></p>
                     <div class="validate"></div>
                   </div>
                   <div class="mb-3">
@@ -261,7 +263,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+ <!--user js file -->
+ <script src="/userscript.js"></script>
+ <script src="/createuser.js"></script>
 </body>
 
 </html>
