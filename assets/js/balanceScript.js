@@ -6,6 +6,11 @@ $(document).ready(function(){
     .fail(errorFunction)
     .always(function(){
     });
+    $.get("http://localhost:8080/EBanking/accounts/12345/")
+    .done(displayBalance)
+    .fail(errorFunction)
+    .always(function(){
+    });
     $("#search").on("submit",searchFunction);
 
 });
@@ -52,4 +57,10 @@ $("#tranasactionBody").html(transactionList);
 }
 function errorFunction(){
 console.log("hi")
+}
+function displayBalance(data){
+    
+// console.log(JSON.stringify(myJson));
+let balance=data.toString();
+$("#balance-ammount").html(balance);
 }
