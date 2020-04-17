@@ -6,6 +6,8 @@ $(document).ready(function(){
         headers: {
     "Content-Type": "application/json"
 }
-    });  
+    }).then(res => res.json()).then(function(res) {
+        // window.location = "index.html";
+    } )  
 });
 });
